@@ -1,0 +1,1225 @@
+{
+  "dataset": "standard",
+  "dataset_sha256": "631f212e0130627f39fab788d1e02d15ff1de5ef9e0e7acfd6079b8498399b06",
+  "date": "2026-10-18T11:35:57+00:00",
+  "runner": {
+    "docker_server": "29.6.1",
+    "image": "qiskit-repair-runner:2.4.2",
+    "image_id": "sha256:fef340d8300d2d9609038f4202784c2a273b28a9cfc46515dd1db09c83802df2",
+    "harness_sha256": "85569cac30be8db2d3af2bf6614642b38a68af8feca5c4857fe4962df9b91ca3"
+  },
+  "exec_timeout_s": 30.0,
+  "memory": "1g",
+  "n_tasks": 151,
+  "n_usable": 143,
+  "tasks": {
+    "qiskitHumanEval/0": {
+      "version": "0029b5f20e3f",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/1": {
+      "version": "6a4f8be2fa07",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/2": {
+      "version": "4f9fdcea7406",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/3": {
+      "version": "b2d63d3b8d01",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/4": {
+      "version": "16405d1af284",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/5": {
+      "version": "d90ea8bd0089",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/6": {
+      "version": "f2c2e9a768a8",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/7": {
+      "version": "4eb67a14d00b",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/8": {
+      "version": "02ca73502fd4",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/9": {
+      "version": "54910dbe86f2",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/10": {
+      "version": "4d0488c72cf3",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/11": {
+      "version": "dab4929f2bbf",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/12": {
+      "version": "9bf636a405da",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/13": {
+      "version": "1b5b49fd7305",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/14": {
+      "version": "968e2790266f",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/15": {
+      "version": "d2a332116236",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/16": {
+      "version": "3cd986dc1cc1",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/17": {
+      "version": "5eaae7426f1d",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/18": {
+      "version": "438dbc6042f6",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/19": {
+      "version": "24e49e0fe9fb",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/20": {
+      "version": "254055c03e5a",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/21": {
+      "version": "2c5e5b8d869c",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/22": {
+      "version": "65649a83c2fb",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/23": {
+      "version": "dcbaedafbb31",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/24": {
+      "version": "6fd544c51512",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/25": {
+      "version": "ad52269759e9",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/26": {
+      "version": "74387539cd7a",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/27": {
+      "version": "c3152c166efd",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/28": {
+      "version": "ab1ab1622f3b",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/29": {
+      "version": "be314f6508a7",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/30": {
+      "version": "393e29e98215",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/31": {
+      "version": "9195fb2dd08c",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/32": {
+      "version": "f94401cea2ec",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/33": {
+      "version": "16039e53f578",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/34": {
+      "version": "1c1f1efa7202",
+      "difficulty": "difficult",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/35": {
+      "version": "bc0ac0440aed",
+      "difficulty": "difficult",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/36": {
+      "version": "5d74f45642d8",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/37": {
+      "version": "8b06994f8c01",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/38": {
+      "version": "14ea0fef25b7",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/39": {
+      "version": "c8ae81916b39",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/40": {
+      "version": "4f911b093029",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/41": {
+      "version": "52806fe57e82",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/42": {
+      "version": "0aff9ffdb9e7",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/43": {
+      "version": "371ce3030ae0",
+      "difficulty": "basic",
+      "reference_passed": false,
+      "reference_category": "api_misuse",
+      "reference_error": "AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/44": {
+      "version": "b457f8a7e641",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/45": {
+      "version": "bc73e66c98d9",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/46": {
+      "version": "42ced8ba9d64",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/47": {
+      "version": "bde2f1a35358",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/48": {
+      "version": "853856b58cc8",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/49": {
+      "version": "bfdb18bc8d28",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/50": {
+      "version": "41b9e266f23e",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/51": {
+      "version": "612059bba1aa",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/52": {
+      "version": "66c814839b5b",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/53": {
+      "version": "7429a65972b3",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/54": {
+      "version": "25030ddd038a",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/55": {
+      "version": "ae875b4cc63f",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/56": {
+      "version": "4a515d0e2905",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/57": {
+      "version": "128038959ca7",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/58": {
+      "version": "1b42720483e7",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/59": {
+      "version": "420904751c9b",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/60": {
+      "version": "b7c987ff4ae2",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/61": {
+      "version": "257338b0d67d",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/62": {
+      "version": "25de197b6744",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/63": {
+      "version": "a5e517105307",
+      "difficulty": "difficult",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/64": {
+      "version": "c44b639ffd42",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/65": {
+      "version": "23a36e4fcade",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/66": {
+      "version": "c8a4098c75c5",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/67": {
+      "version": "dfbda087c706",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/68": {
+      "version": "47e78a4f8e92",
+      "difficulty": "difficult",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/69": {
+      "version": "7fef82739857",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/70": {
+      "version": "e12f1e546f97",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/71": {
+      "version": "ed59e1c2af6f",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/72": {
+      "version": "9e45ec042075",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/73": {
+      "version": "c5d8d3445c92",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/74": {
+      "version": "49595ac2b0eb",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/75": {
+      "version": "464e65b1ce17",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/76": {
+      "version": "da66c518f697",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/77": {
+      "version": "98e688834ed4",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/78": {
+      "version": "356ec048c27f",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/79": {
+      "version": "fdfdf4165542",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/80": {
+      "version": "06e345f50214",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/81": {
+      "version": "dedc55189906",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/82": {
+      "version": "e657f06f9e59",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/83": {
+      "version": "30d3202000b1",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/84": {
+      "version": "9e745d0d8171",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/85": {
+      "version": "4870fff2c6d1",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/86": {
+      "version": "628e52869549",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/87": {
+      "version": "6b71209d46e1",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/88": {
+      "version": "c38f21d95326",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/89": {
+      "version": "5a8fec63be41",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/90": {
+      "version": "182bbaff337e",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/91": {
+      "version": "76545a841a0c",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/92": {
+      "version": "2060cd2c9859",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/93": {
+      "version": "b910f777a7cb",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/94": {
+      "version": "7ea92ecde0ca",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/95": {
+      "version": "57258731c423",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/96": {
+      "version": "349a0aeba1e5",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/97": {
+      "version": "0cd5058c8d57",
+      "difficulty": "intermediate",
+      "reference_passed": false,
+      "reference_category": "api_misuse",
+      "reference_error": "AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/98": {
+      "version": "10542711e2f0",
+      "difficulty": "basic",
+      "reference_passed": false,
+      "reference_category": "api_misuse",
+      "reference_error": "AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/99": {
+      "version": "8c9b3742b694",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/100": {
+      "version": "978ec346782b",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/101": {
+      "version": "c341f20b9aa4",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/102": {
+      "version": "640c1e631f3f",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/103": {
+      "version": "e379fb18b309",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/104": {
+      "version": "bf477973b9ed",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/105": {
+      "version": "c34bf942c032",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/106": {
+      "version": "d0797ca662ff",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/107": {
+      "version": "ff4ba7bd5094",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/108": {
+      "version": "0014e3fd2857",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/109": {
+      "version": "ff5625ace84e",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/110": {
+      "version": "acba96ea396e",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/111": {
+      "version": "eb7ea2eb903c",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/112": {
+      "version": "44e3271fcf68",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/113": {
+      "version": "33fa850bdd67",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/114": {
+      "version": "8da12c5c5b4e",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/115": {
+      "version": "f42a270fe21f",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/116": {
+      "version": "a7dbdd29583b",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/117": {
+      "version": "0f9040c059de",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/118": {
+      "version": "92da40cf70fa",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/119": {
+      "version": "7eaa960059bb",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/120": {
+      "version": "6b7b2bd46566",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/121": {
+      "version": "63fd3b6df43e",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/122": {
+      "version": "7f184c1fc39b",
+      "difficulty": "basic",
+      "reference_passed": false,
+      "reference_category": "runtime_error",
+      "reference_error": "Exception: Credentials file /tmp/.qiskit/qiskit-ibm.json does not exist. Please set env var QISKIT_IBM_TOKEN to access the service, or save your IBM Quantum API token using QiskitRuntimeService. More info about saving your token using QiskitRuntimeService https://docs.quantum.ibm.com/api/qiskit-ibm-",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/123": {
+      "version": "e573959db0ac",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/124": {
+      "version": "9a3c6af3eb36",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/125": {
+      "version": "3c3d2af36a4e",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/126": {
+      "version": "f72a1d8123fc",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/127": {
+      "version": "457c09a6c3c8",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/128": {
+      "version": "8482e69993ab",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/129": {
+      "version": "5c3723d45122",
+      "difficulty": "intermediate",
+      "reference_passed": false,
+      "reference_category": "api_misuse",
+      "reference_error": "AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/130": {
+      "version": "beacf296b4a2",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/131": {
+      "version": "c125f02bc5a3",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/132": {
+      "version": "dc48d19a52f4",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/133": {
+      "version": "9e165444f1f3",
+      "difficulty": "basic",
+      "reference_passed": false,
+      "reference_category": "api_misuse",
+      "reference_error": "AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/134": {
+      "version": "32e4033c185e",
+      "difficulty": "basic",
+      "reference_passed": false,
+      "reference_category": "api_misuse",
+      "reference_error": "AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/135": {
+      "version": "fe7b03f618ae",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/136": {
+      "version": "586eee3acc4d",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/137": {
+      "version": "e01f32cfc0f7",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/138": {
+      "version": "984260ace9db",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/139": {
+      "version": "0bca50524cf3",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/140": {
+      "version": "6392f23d91e7",
+      "difficulty": "basic",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/141": {
+      "version": "040b69d143e9",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/142": {
+      "version": "f3db83ea5730",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/143": {
+      "version": "3f1f1d99e360",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/144": {
+      "version": "b6652143570c",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/145": {
+      "version": "5f99f5e2b368",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/146": {
+      "version": "c636e17a84d0",
+      "difficulty": "basic",
+      "reference_passed": false,
+      "reference_category": "api_misuse",
+      "reference_error": "AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"",
+      "stub_passed": false
+    },
+    "qiskitHumanEval/147": {
+      "version": "10d879fb9ada",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/148": {
+      "version": "4ed39f7bd505",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/149": {
+      "version": "32d6a0752341",
+      "difficulty": "intermediate",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    },
+    "qiskitHumanEval/150": {
+      "version": "20f215fe03af",
+      "difficulty": "difficult",
+      "reference_passed": true,
+      "reference_category": null,
+      "reference_error": null,
+      "stub_passed": false
+    }
+  }
+}

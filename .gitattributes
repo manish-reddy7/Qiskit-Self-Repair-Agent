@@ -1,0 +1,2 @@
+# Keep LF everywhere: the benchmark JSON is hash-checked (NOTICE.md, validation manifests, --resume).
+* text=auto eol=lf

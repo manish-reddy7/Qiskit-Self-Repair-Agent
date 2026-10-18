@@ -1,0 +1,21 @@
+# Experiment configuration. Every key is optional; omitted keys use the defaults in config.py.
+# Environment variables QRA_<KEY> (e.g. QRA_MODEL) override this file; CLI flags override both.
+# Keep this file fixed for the duration of an evaluation: both modes must use identical settings.
+[agent]
+provider = "anthropic"
+model = "claude-opus-5-5"
+effort = "medium"            # Opus 5.5 rejects temperature/top_p; effort is the generation control
+max_tokens = 16000
+request_timeout_s = 300
+provider_max_retries = 3
+max_repairs = 2              # additional attempts after the initial generation
+max_run_seconds = 900        # per-task wall-clock budget across all attempts
+max_run_tokens = 200000      # per-task token budget across all attempts
+exec_timeout_s = 30
+memory = "1g"
+cpus = 1.0
+pids_limit = 256
+max_output_chars = 4000
+image = "qiskit-repair-runner:2.4.2"
+dataset = "standard"
+results_dir = "results"

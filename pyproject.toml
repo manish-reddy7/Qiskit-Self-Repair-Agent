@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qiskit-self-repair-agent"
+version = "0.1.0"
+description = "Research prototype: does execution-guided LLM self-repair improve Qiskit HumanEval pass rates?"
+requires-python = ">=3.11"
+# Qiskit is NOT a host dependency: generated code and tests run only inside the Docker sandbox
+# (docker/requirements-runner.txt pins the execution environment).
+dependencies = ["anthropic==1.15.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "ruff==0.17.1", "mypy==2.4.0"]
+ui = ["streamlit==1.66.0"]
+
+[project.scripts]
+qiskit-repair-agent = "qiskit_repair_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qiskit_repair_agent = ["benchmark/*.json", "benchmark/*.md", "benchmark/LICENSE-*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["docker: needs a running Docker daemon and the sandbox image (skipped, and reported, otherwise)"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src"]
+warn_unused_ignores = true
