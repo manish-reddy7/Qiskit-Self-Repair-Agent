@@ -12,7 +12,7 @@ task (registry) ─► prompts.initial_prompt ─► Provider.generate ─► ll
 | `config.py` | Frozen, validated `Config`. Defaults < TOML `[agent]` < `QRA_*` env < CLI. Holds no secrets |
 | `tasks.py` | Loads the vendored Qiskit HumanEval JSON, validates its schema, computes content-hash task versions, normalises ids, and selects tasks using the validation manifest |
 | `prompts.py` | Versioned (`PROMPT_VERSION`) system, initial and repair prompts, plus the structured failure summary |
-| `llm.py` | `Provider` protocol, `AnthropicProvider`, `OpenRouterProvider` (stdlib HTTP, free-tier pacing), `ScriptedProvider` (tests), `ReferenceMockProvider` (offline demo), `extract_code` |
+| `llm.py` | `Provider` protocol, `AnthropicProvider`, `OpenRouterProvider` (stdlib HTTP, free-tier pacing), `OllamaProvider` (local /api/chat), `ScriptedProvider` (tests), `ReferenceMockProvider` (offline demo), `extract_code` |
 | `controller.py` | `run_task`: baseline and repair loops, stop conditions, per-attempt trace, final status |
 | `runner.py` | Builds the hardened `docker run` command, sends the payload on stdin, enforces the timeout (`docker kill`), parses the result |
 | `harness.py` | Runs **inside** the container: prelude → solution → hidden test → `check()`. Classifies failures and bounds output |

@@ -211,7 +211,8 @@ def render_markdown(metrics: dict, meta: dict, records: list[RunRecord]) -> str:
                   f"- Difference in initial pass rate (both modes generate independently): "
                   f"{_fmt(c['initial_pass_rate_difference_pp'])} pp",
                   f"- Paired outcomes over {c['n_pairs']} pairs: {c['paired']}",
-                  f"- Exact McNemar test on discordant pairs: p = {_fmt(c['mcnemar_exact_p'])}"
+                  "- Exact McNemar test on discordant pairs: p = "
+                  + ("n/a" if c["mcnemar_exact_p"] is None else format(c["mcnemar_exact_p"], ".2g"))
                   + ("" if c["mcnemar_pairs_independent"] else
                      " (pairs from repeats of the same task are not independent: this p-value is optimistic)"),
                   f"- Improvement by repeat (pp): {c['improvement_pp_by_repeat']}; "

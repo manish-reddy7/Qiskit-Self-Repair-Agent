@@ -147,6 +147,42 @@ class OpenRouterProvider:
                            stop_reason=choice.get("finish_reason"))
 
 
+class OllamaProvider:
+    """Local models via Ollama's /api/chat (OLLAMA_HOST, default http://localhost:11434). No cost is reported."""
+    name = "ollama"
+    NUM_CTX = 8192   # ponytail: fixed context; Ollama's default (4096) can silently truncate repair prompts
+
+    def __init__(self, cfg: Config, opener=urllib.request.urlopen):
+        self.cfg, self.model, self._open = cfg, cfg.model, opener
+        self.host = os.environ.get("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
+        if "://" not in self.host:
+            self.host = "http://" + self.host
+
+    def generate(self, system: str, user: str) -> LLMResponse:
+        options: dict[str, Any] = {"num_predict": self.cfg.max_tokens, "num_ctx": self.NUM_CTX}
+        if self.cfg.temperature is not None:
+            options["temperature"] = self.cfg.temperature
+        body = {"model": self.model, "stream": False, "options": options,
+                "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
+        req = urllib.request.Request(f"{self.host}/api/chat", data=json.dumps(body).encode(), method="POST",
+                                     headers={"Content-Type": "application/json"})
+        try:
+            with self._open(req, timeout=self.cfg.request_timeout_s) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "replace")[:300]
+            hint = f" (run: ollama pull {self.model})" if e.code == 404 else ""
+            raise ProviderError(f"Ollama HTTP {e.code}: {detail}{hint}", fatal=e.code in (400, 404)) from e
+        except (urllib.error.URLError, ConnectionError) as e:
+            raise ProviderError(f"Ollama not reachable at {self.host} (is `ollama serve` running?): {e}",
+                                fatal=True) from e
+        except TimeoutError as e:
+            raise ProviderError(f"Ollama timed out after {self.cfg.request_timeout_s:g}s") from e
+        return LLMResponse(text=data.get("message", {}).get("content") or "", model=data.get("model", self.model),
+                           input_tokens=data.get("prompt_eval_count"), output_tokens=data.get("eval_count"),
+                           stop_reason=data.get("done_reason"))
+
+
 class ScriptedProvider:
     """Deterministic provider for tests: returns (or raises) the given items in order."""
     name = "mock"
@@ -192,4 +228,6 @@ def make_provider(cfg: Config, tasks=()) -> Provider:
         return ReferenceMockProvider(tasks)
     if cfg.provider == "openrouter":
         return OpenRouterProvider(cfg)
+    if cfg.provider == "ollama":
+        return OllamaProvider(cfg)
     return AnthropicProvider(cfg)

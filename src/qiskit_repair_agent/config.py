@@ -12,7 +12,7 @@ from dataclasses import dataclass, fields
 from pathlib import Path
 
 DATASETS = ("standard", "hard")
-PROVIDERS = ("anthropic", "openrouter", "mock")
+PROVIDERS = ("anthropic", "openrouter", "ollama", "mock")
 
 
 @dataclass(frozen=True)

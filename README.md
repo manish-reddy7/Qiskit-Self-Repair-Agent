@@ -20,8 +20,21 @@ No experimental result is claimed in this repository. Run the evaluation (below)
 | Benchmark | Official Qiskit HumanEval, vendored (Apache-2.0), 151 tasks, standard and hard variants |
 | Validated tasks | 143 / 151 in each variant. The 8 excluded tasks need an IBM Quantum account or network access (see `src/qiskit_repair_agent/benchmark/validation_*.json`) |
 | Sandbox | Docker: no network, non-root, read-only root, CPU/memory/PID/time limits, no host mounts or env |
-| Tests | 114 pytest tests (8 need Docker, 2 need Streamlit); `ruff` and `mypy` clean |
-| Real-LLM evaluation | Smoke test only: 1 task with `nvidia/nemotron-3-super-120b-a12b:free` (passed). No benchmark evaluation yet |
+| Tests | 119 pytest tests (8 need Docker, 2 need Streamlit); `ruff` and `mypy` clean |
+| Real-LLM evaluation | Full single-run evaluations on 2026-10-18 with Ollama `llama3.1` and `qwen2.5-coder:7b` (143 tasks each); partial `nemotron-3-super-120b:free` run (21 tasks). Result files are local (`results/`, gitignored); see the table below |
+
+## Results so far (single runs, standard variant, `max_repairs=2`, `temperature=0`)
+
+| Model | Tasks | Baseline final pass | Self-repair final pass | Gain | Repair-only / baseline-only | Exact McNemar p |
+|---|---|---|---|---|---|---|
+| llama3.1 8B (Ollama, `max_tokens=16000`) | 143 | 18.9% | 29.4% | +10.5 pp | 15 / 0 | 6.1e-5 |
+| qwen2.5-coder 7B (Ollama, `max_tokens=4096`) | 143 | 33.6% | 44.8% | +11.2 pp | 16 / 0 | 3.1e-5 |
+| nemotron-3-super 120B (OpenRouter free, partial) | 21 | 81.0% | 81.0% | +0.0 pp | 0 / 0 | n/a |
+
+- **Cost of repair:** about 2.2× the mean latency and 2.2–3.0× the output tokens.
+- **What repair fixed:** mostly runtime errors. Qiskit API-misuse failures barely changed.
+- **Limits:** each model ran once, so run-to-run variance is unmeasured. The two local runs used different
+  output caps, so the comparison between models is less controlled than the baseline-vs-repair comparison within each model.
 
 ## Requirements
 
@@ -55,7 +68,7 @@ variables < CLI flags. Main keys:
 
 | Key | Default | Meaning |
 |---|---|---|
-| `provider` | `anthropic` | `anthropic`, `openrouter` or `mock` |
+| `provider` | `anthropic` | `anthropic`, `openrouter`, `ollama` or `mock` |
 | `model` | `claude-opus-5-5` | Model id (recorded per attempt from the API response) |
 | `effort` | `medium` | `output_config.effort`. Opus 5.5 rejects `temperature`, so `temperature` is unset by default |
 | `max_repairs` | 2 | Extra attempts after the initial generation (repair mode only) |
@@ -87,6 +100,21 @@ Other options: `--tasks 0 5 12`, `--difficulty basic`, `--model ...`, `--max-rep
 stub first and the reference solution on repair. That exercises prompts, the real sandbox, the repair
 loop and the reports, but the numbers it produces are scripted and say nothing about any LLM.
 Reports from the mock are labelled accordingly.
+
+**Local models via Ollama (free, no rate limits):** install Ollama, `ollama pull <model>`, keep `ollama serve`
+running (or set `OLLAMA_HOST`), then:
+
+```bash
+python -m qiskit_repair_agent.cli run 7 --mode repair --provider ollama --model llama3.1
+python -m qiskit_repair_agent.cli evaluate --mode both --provider ollama --model llama3.1
+```
+
+- The context window is fixed at 8192 tokens (Ollama's default of 4096 can cut off repair prompts).
+- `max_tokens` is sent as `num_predict`. `temperature` is sent only if set (`QRA_TEMPERATURE=0` is recommended).
+- Token counts come from Ollama. Cost is reported as unknown, since running locally has no API price.
+- A missing model or a stopped server stops the evaluation. Resume it with `--resume`.
+- A code-tuned model such as `qwen2.5-coder:7b` (about 4.7 GB) is likely stronger than general chat models
+  at this size. Use the same model for both modes.
 
 **Free models via OpenRouter:** get a key at https://openrouter.ai/keys, set `OPENROUTER_API_KEY`, and pick a
 `:free` model. The list changes often; see `https://openrouter.ai/api/v1/models` for ids ending in `:free`.
@@ -152,7 +180,7 @@ Results contain generated code and error text, never API keys. `results/` is git
   intended experimental difference, but it means repair mode sees test information the baseline does not.
 - **Excluded tasks.** 8 of 151 tasks need IBM Quantum cloud access and cannot run offline.
 - **Failure categories are heuristic** (exception type and traceback origin). See `docs/architecture.md`.
-- **Providers.** Anthropic and OpenRouter, behind a small `Provider` protocol (`llm.py`). Compare modes only within one model.
+- **Providers.** Anthropic, OpenRouter and Ollama, behind a small `Provider` protocol (`llm.py`). Compare modes only within one model.
 - **Cost is not reported.** The Messages API returns token usage but not cost, so cost is recorded as
   unknown rather than estimated.
 - **Significance:** `report.md` gives an exact McNemar p-value on the discordant task pairs and the improvement per

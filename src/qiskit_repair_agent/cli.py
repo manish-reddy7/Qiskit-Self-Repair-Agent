@@ -143,7 +143,7 @@ def build_parser() -> argparse.ArgumentParser:
     common.add_argument("--config", default=None, help="TOML config file (e.g. configs/default.toml)")
     common.add_argument("--dataset", choices=["standard", "hard"], help="Qiskit HumanEval variant")
     llm = argparse.ArgumentParser(add_help=False)
-    llm.add_argument("--provider", choices=["anthropic", "openrouter", "mock"])
+    llm.add_argument("--provider", choices=["anthropic", "openrouter", "ollama", "mock"])
     llm.add_argument("--model")
     llm.add_argument("--max-repairs", type=int, dest="max_repairs")
     llm.add_argument("--include-unvalidated", action="store_true", help="allow tasks not in the validation manifest")
