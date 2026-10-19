@@ -15,6 +15,9 @@ class TrustedLocalRunner(DockerRunner):
     def _preflight(self):
         pass
 
+    def check_available(self):
+        return {"image_id": "local-test", "harness_sha256": "local-test"}
+
     def command(self, name):
         return [sys.executable, "-I", "-c", HARNESS_SOURCE]
 

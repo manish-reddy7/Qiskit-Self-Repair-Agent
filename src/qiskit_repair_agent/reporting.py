@@ -68,6 +68,10 @@ def _mode_metrics(rs: list[RunRecord]) -> dict:
         "mean_repairs_initially_failing":
             statistics.fmean([r.repairs_used for r in first_fail]) if first_fail else None,
         "repairs_distribution": {str(k): v for k, v in sorted(Counter(r.repairs_used for r in rs).items())},
+        # Repair-budget ablation from one run: the loop is prefix-consistent, so the outcome with a budget
+        # of k repairs equals "passed using at most k repairs" in a run with a larger budget.
+        "pass_rate_by_repair_budget": {str(k): _rate(sum(r.final_passed and r.repairs_used <= k for r in rs), n)
+                                       for k in range(max((r.repairs_used for r in rs), default=0) + 1)},
         "latency_mean_s": statistics.fmean(latencies) if rs else None,
         "latency_median_s": statistics.median(latencies) if rs else None,
         # totals over runs that reported usage; None when no run did (unknown, not zero)

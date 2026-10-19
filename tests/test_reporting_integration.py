@@ -183,3 +183,9 @@ def test_load_resume_restores_original_config(cfg, tmp_path):
     cfg2, tasks2, modes, repeats, _ = load_resume(tmp_path)
     assert cfg2 == c and [t.task_id for t in tasks2] == [t.task_id for t in tasks]
     assert (modes, repeats) == (["baseline", "repair"], 3)
+
+
+def test_pass_rate_by_repair_budget(records):
+    r = compute_metrics(records)["modes"]["repair"]
+    # repair runs: task1 pass@0, task2 pass@1, task3 fail after 2, task4 provider error -> n = 4
+    assert r["pass_rate_by_repair_budget"] == {"0": 0.25, "1": 0.5, "2": 0.5}

@@ -23,18 +23,20 @@ No experimental result is claimed in this repository. Run the evaluation (below)
 | Tests | 119 pytest tests (8 need Docker, 2 need Streamlit); `ruff` and `mypy` clean |
 | Real-LLM evaluation | Full single-run evaluations on 2026-10-18 with Ollama `llama3.1` and `qwen2.5-coder:7b` (143 tasks each); partial `nemotron-3-super-120b:free` run (21 tasks). Result files are local (`results/`, gitignored); see the table below |
 
-## Results so far (single runs, standard variant, `max_repairs=2`, `temperature=0`)
+## Results so far (standard variant, `max_repairs=2`, `temperature=0` unless noted)
 
 | Model | Tasks | Baseline final pass | Self-repair final pass | Gain | Repair-only / baseline-only | Exact McNemar p |
 |---|---|---|---|---|---|---|
-| llama3.1 8B (Ollama, `max_tokens=16000`) | 143 | 18.9% | 29.4% | +10.5 pp | 15 / 0 | 6.1e-5 |
+| llama3.1 8B (Ollama, `max_tokens=4096`) | 143 | 18.9% | 30.1% | +11.2 pp | 16 / 0 | 3.1e-5 |
 | qwen2.5-coder 7B (Ollama, `max_tokens=4096`) | 143 | 33.6% | 44.8% | +11.2 pp | 16 / 0 | 3.1e-5 |
 | nemotron-3-super 120B (OpenRouter free, partial) | 21 | 81.0% | 81.0% | +0.0 pp | 0 / 0 | n/a |
+| qwen2.5-coder 7B, `temperature=0.7`, 3 repeats | 3 × 143 | 32.4% (mean) | 42.0% (mean) | +9.6 ± 1.1 pp | 57 / 16 | per repeat 0.036, 0.00052, 0.0081 |
+| qwen2.5-coder 7B, hard (prose-only) prompts | 143 | 17.5% | 25.2% | +7.7 pp | 11 / 0 | 9.8e-4 |
 
 - **Cost of repair:** about 2.2× the mean latency and 2.2–3.0× the output tokens.
 - **What repair fixed:** mostly runtime errors. Qiskit API-misuse failures barely changed.
-- **Limits:** each model ran once, so run-to-run variance is unmeasured. The two local runs used different
-  output caps, so the comparison between models is less controlled than the baseline-vs-repair comparison within each model.
+- **Repair budget** (qwen, up to 3 repairs in one run): pass rate 33.6% → 38.5% → 42.7% → 44.1% after 0 → 1 → 2 → 3 repairs.
+- **Limits:** only qwen has repeats. Two open 7–8B models on one benchmark; see the final report for threats to validity.
 
 ## Requirements
 
