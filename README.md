@@ -142,9 +142,11 @@ evaluation's `metadata.json`, not from the current command line, and skips runs 
 continue if the prompt version, dataset, task versions, sandbox image or harness changed. Typical use: an
 OpenRouter free-tier run stops at the 50/day limit, and you resume it the next day.
 
-**Dashboard:** `streamlit run dashboard/app.py` (optionally `-- path/to/results`). It is a read-only browser:
-pick an evaluation to see headline metrics, the McNemar p-value, failure categories, a filterable run table,
-and each attempt's code, error and traceback.
+**Dashboard:** `streamlit run dashboard/app.py` (optionally `-- path/to/results`). The main page browses
+results: pick an evaluation to see headline metrics, the McNemar p-value, failure categories, a filterable run table,
+and each attempt's code, error and traceback. The **Run** page (sidebar) runs a single task live with any
+provider and shows every attempt's code and error, or starts a full `evaluate` in the background and shows its log
+(press Refresh to update); results appear on the main page.
 
 ## Outputs
 

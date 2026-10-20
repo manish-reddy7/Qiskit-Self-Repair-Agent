@@ -41,3 +41,14 @@ def test_dashboard_handles_no_results(tmp_path, monkeypatch):
     monkeypatch.setattr("sys.argv", ["app.py", str(tmp_path)])
     at = AppTest.from_file(APP, default_timeout=30).run()
     assert not at.exception and "No results" in at.info[0].value
+
+
+def test_run_page_runs_a_task_offline(cfg, monkeypatch):
+    monkeypatch.setenv("QRA_RESULTS_DIR", cfg.results_dir)
+    monkeypatch.setattr("qiskit_repair_agent.runner.DockerRunner", lambda c: FakeRunner())
+    at = AppTest.from_file(str(Path(APP).parent / "pages" / "1_Run.py"), default_timeout=30).run()
+    assert not at.exception
+    at.sidebar.selectbox[0].set_value("mock").run()
+    at = at.button[0].click().run()
+    assert not at.exception and at.code                # attempt code shown
+    assert any(p.name.startswith("run-") for p in Path(cfg.results_dir).iterdir())
